@@ -1,7 +1,6 @@
-import { randomUUID } from 'node:crypto';
 import http from 'node:http'
-import { Database } from './database.js';
 import { json } from './middlewares/json.js';
+import { routes } from './route.js';
 
 /*
 GET     -> BUSCAR UM RECURSO DO BACK-END
@@ -19,33 +18,17 @@ Cabeçalhos (Requisição/resposta) => Metadados
 HTTP Status code
 */
 
-const database = new Database()
-
 const server = http.createServer(async (req, res) => {
-
     const { method, url } = req;
-
     await json(req, res)
+    const route = routes.find(route => {
+        return route.method === method && route.path === url
+    }) 
 
-    if(method === 'GET' && url === '/users') {
-        const users = database.select('users')
-
-        return res.end(JSON.stringify(users));
+    if(route) {
+       return route.handler(req, res)
     }
-
-    if(method === 'POST' && url === '/users') {
-        const {name, email } = req.body
-        const user = {
-            id: randomUUID(),
-            name,
-            email,
-        }
-
-        database.insert("users", user)
-        return res.writeHead(201).end();
-    }
-
-    return res.end('hello pp')
+    return res.writeHead(404).end()
 })
 
 server.listen(3333)
