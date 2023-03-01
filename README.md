@@ -7,17 +7,20 @@ Nesse primeiro módulo iremos desenvolver uma API RESTful com Node.js focada nos
 <p>Begin with nodejs 👋</p>
 
 ![Begin with nodejs](https://github.com/simaomenezes/projeto01_fundamento_nodejs/blob/main/src/img/iniciando_node_01.PNG?raw=true)
+
 Structure of Application 👋
+
 ![Structure of Application](https://github.com/simaomenezes/projeto01_fundamento_nodejs/blob/main/src/img/iniciando_node_02.PNG?raw=true)
 
 Streams in Nodejs 👋
+
 ![Streams in Nodejs](https://github.com/simaomenezes/projeto01_fundamento_nodejs/blob/main/src/img/iniciando_node_03.PNG?raw=true)
 
 Route of Application 👋
+
 ![Route of Application](https://github.com/simaomenezes/projeto01_fundamento_nodejs/blob/main/src/img/iniciando_node_04.PNG?raw=true)
 
 Quiz main 👋
+
 ![Quiz main](https://github.com/simaomenezes/projeto01_fundamento_nodejs/blob/main/src/img/iniciando_node_05.PNG?raw=true)
 
-Quiz 👋
-![alt text](https://github.com/simaomenezes/projeto01_fundamento_nodejs/blob/main/src/img/iniciando_node_06.PNG?raw=true)
